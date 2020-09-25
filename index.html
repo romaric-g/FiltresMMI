@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>Hello, world!</title>
+		<script src="capture.js"></script>
+
+		<script src="functions/FilterImage.js"></script>
+		
+		<script src="filter/index.js"></script>
+		<script src="filter/blueGrid.js"></script>
+		<script src="filter/noise.js"></script>
+		<script src="filter/verticalSplit.js"></script>
+		<script src="filter/kaleidoscope.js"></script>
+		<script src="filter/grayFilter.js"></script>
+		<script src="filter/pixelise.js"></script>
+		<script src="filter/binary.js"></script>
+		<script src="filter/moyenneur.js"></script>
+		<script src="filter/gaussien.js"></script>
+
+		<script src="chart/index.js"></script>
+		<link rel="stylesheet" href="main.css" type="text/css" media="all">
+    </head>
+    <body>
+		<header>
+			<p>snapshot from webcam by WebRTC <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">source</a></p>
+			<video id="video">Video stream not available.</video>
+			<label for="pet-select">Choose a filter:</label>
+			<select name="pets" id="selectID">
+				<option value="verticalSplit">verticalSplit</option>
+				<option value="blueGrid">blueGrid</option>
+				<option value="grayFilter">grayFilter</option>
+				<option value="kaleidoscope">kaleidoscope</option>
+				<option value="noise">noise</option>
+				<option value="pixelise">pixelise</option>
+				<option value="binary">binary</option>
+				<option value="moyenneur">moyenneur</option>
+				<option value="gaussien">gaussien</option>
+			</select>
+			<button id="startbutton">Take new photo</button>
+		</header>
+		<main>
+			<canvas id="mycanvas"></canvas>
+			<img id="photo" alt="The screen capture will appear in this box."> 
+			<canvas id="myChart" width="320" height="240"></canvas>
+		</main>
+	</body>
+</html>
